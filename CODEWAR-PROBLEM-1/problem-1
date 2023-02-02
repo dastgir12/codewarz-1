@@ -1,0 +1,11 @@
+function bouncingBall(h,  bounce,  w) {
+const condition = h>0 && (bounce>0 && bounce<1) && w<h ;
+
+if(condition)
+{
+  return h<w ? -1 : 2 + bouncingBall((h*bounce) , bounce , w)
+}else
+{
+  return -1;
+}
+}
