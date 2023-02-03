@@ -1,4 +1,5 @@
-//Solution-1
+//Q1:
+//Solution-1:
 
 function bouncingBall(h,  bounce,  w) {
 const condition = h>0 && (bounce>0 && bounce<1) && w<h ;
@@ -26,3 +27,16 @@ function bouncingBall(h,  bounce,  window) {
   }
   return views;
 }
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Q2
+//solution:
+
+function count (string) {  
+  var count = {};
+    string.split('').forEach(function(s){
+      count[s] ? count[s]++ : count[s]=1
+    })
+    return count;
+  }
