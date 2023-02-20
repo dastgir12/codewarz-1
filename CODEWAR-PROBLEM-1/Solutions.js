@@ -40,3 +40,38 @@ function count (string) {
     })
     return count;
   }
+
+
+  //=====================================================================================================================
+
+  //Q3
+  //sol:
+  function score( dice ) {
+    // get array of counts of each numberlet countNumber = [];
+      let score = 0;
+      for(i=0; i<6; i++){
+         countNumber[i] = dice.filter(element => element == (i+1)).length;
+      }
+    // function for 1, 5function doubleEvent(array, i, big, small) {
+        if(array[i]>=3) {
+          score+=big;
+          countNumber[i] = countNumber[i] - 3;
+        }
+        score+=countNumber[i] * small;
+      }
+    
+    // function for restfunction soleEvent(array, i, reward) {
+        if(array[i]>=3) {
+          score+=reward;
+        }
+      }
+    
+      doubleEvent(countNumber, 0, 1000, 100);
+      doubleEvent(countNumber, 4, 500, 50);
+      soleEvent(countNumber, 1, 200);
+      soleEvent(countNumber, 2, 300);
+      soleEvent(countNumber, 3, 400);
+      soleEvent(countNumber, 5, 600);
+    
+      return score;
+    }
